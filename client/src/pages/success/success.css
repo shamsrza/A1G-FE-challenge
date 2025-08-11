@@ -1,0 +1,74 @@
+.success_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+  gap: 2rem;
+}
+.success_container .success_title {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+.success_container .success_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.success_container .success_content img {
+  width: 12rem;
+}
+@media (min-width: 640px) {
+  .success_container .success_content img {
+    width: 17rem;
+  }
+}
+.success_container .success_content p {
+  text-align: center;
+  font-size: 1.25rem;
+  color: #888;
+  padding: 0 1rem;
+}
+.success_container .submit_another_order {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #f8f9fa;
+  margin: 0;
+  filter: drop-shadow(0 -2mm 4mm rgba(0, 0, 0, 0.1));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 6rem;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .success_container .submit_another_order {
+    filter: none;
+    position: relative;
+    background: none;
+  }
+}
+.success_container .submit_another_order .custom_btn {
+  width: 15rem;
+  padding: 0 1rem;
+  height: 48px;
+  background: linear-gradient(135deg, #007bff 0%, #6c757d 100%);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.success_container .submit_another_order .custom_btn:active, .success_container .submit_another_order .custom_btn:hover {
+  color: #f8f9fa;
+}/*# sourceMappingURL=success.css.map */

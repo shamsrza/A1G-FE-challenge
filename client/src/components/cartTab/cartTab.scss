@@ -1,0 +1,108 @@
+@import '../../styles/abstracts/variables';
+@import '../../styles/abstracts/mixins';
+
+.my_order_tab {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: $white-color;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  width: 20rem;
+  height: 100%;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  transition-property: transform;
+  transition-duration: 500ms;
+  transform: translateX(0%);
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: auto; /* IE and Edge */
+
+  @include responsive($breakpoint-md) {
+    width: 24rem;
+  }
+
+  & ::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
+  .my_order_list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+    & > div:nth-child(1) {
+      flex: 1;
+      @include flex-center($direction: column);
+      align-items: flex-start;
+      padding-top: 0.7rem;
+
+      .my_order_tab_title {
+        font-size: $font-size-xl;
+        line-height: 2rem;
+        margin-top: 1.25rem;
+      }
+
+      button {
+        cursor: pointer;
+        border: none;
+        background: $light-gray;
+        color: $dark-gray;
+        font-size: $font-size-lg;
+        text-align: left;
+      }
+    }
+
+    ul {
+      li {
+        border: none;
+        margin: 0;
+      }
+    }
+  }
+
+  .cart_total {
+    position: sticky;
+    bottom: 0;
+    background: $light-gray;
+    padding: 1rem;
+    margin: 0;
+    filter: drop-shadow(0 -2mm 4mm rgba(0, 0, 0, 0.1));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    height: 8rem;
+
+    .cart_total_desc {
+      @include flex-center($direction: row);
+      justify-content: space-between;
+      p {
+        font-weight: $font-weight-bold;
+      }
+    }
+  }
+}
+
+.open_tab {
+  transform: translateX(100%);
+}
+
+.custom_btn {
+  width: 100%;
+  height: 48px;
+  background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+  border: none;
+  border-radius: 5px;
+  color: $light-gray;
+  font-size: $font-size-base;
+  font-weight: $font-weight-light-bolder;
+  cursor: pointer;
+  text-decoration: none !important;
+  @include flex-center($direction: row);
+
+  &:active,
+  &:hover {
+    color: $light-gray;
+  }
+}

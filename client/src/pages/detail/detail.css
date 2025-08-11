@@ -1,0 +1,84 @@
+.product_detail {
+  background: #f0f0f0;
+  margin-top: 5rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+@media (min-width: 768px) {
+  .product_detail {
+    padding: 5rem;
+  }
+}
+.product_detail .product_detail_title {
+  font-size: 2rem;
+  line-height: 2.25rem;
+  text-align: center;
+}
+.product_detail .product_detail_grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+@media (min-width: 768px) {
+  .product_detail .product_detail_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.product_detail .product_detail_grid img {
+  width: 15rem;
+}
+.product_detail .product_detail_grid .product_detail_description {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.product_detail .product_detail_grid .product_detail_description h1 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.product_detail .product_detail_grid .product_detail_description .product_detail_price {
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+.product_detail .product_detail_grid .product_detail_description .quantity_btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1.25rem;
+  margin-bottom: 5rem;
+}
+.product_detail .product_detail_grid .product_detail_description .quantity_btns .quantity_btn_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+}
+.product_detail .product_detail_grid .product_detail_description .quantity_btns .quantity_btn_div button {
+  background-color: #f8f9fa;
+  height: 2rem;
+  width: 2rem;
+  font-weight: 400;
+  font-size: 1.25rem;
+  border-radius: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border: 1px solid #888;
+}
+.product_detail .product_detail_grid .product_detail_description .quantity_btns .quantity_btn_div p {
+  height: 2rem;
+  width: 2rem;
+  font-size: 1rem;
+  border-radius: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}/*# sourceMappingURL=detail.css.map */

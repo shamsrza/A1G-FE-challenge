@@ -1,0 +1,104 @@
+.my_order_tab {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  width: 20rem;
+  height: 100%;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  transition-property: transform;
+  transition-duration: 500ms;
+  transform: translateX(0%);
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: auto; /* IE and Edge */
+}
+@media (min-width: 768px) {
+  .my_order_tab {
+    width: 24rem;
+  }
+}
+.my_order_tab ::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+.my_order_tab .my_order_list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+}
+.my_order_tab .my_order_list > div:nth-child(1) {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 0.7rem;
+}
+.my_order_tab .my_order_list > div:nth-child(1) .my_order_tab_title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-top: 1.25rem;
+}
+.my_order_tab .my_order_list > div:nth-child(1) button {
+  cursor: pointer;
+  border: none;
+  background: #f8f9fa;
+  color: #343a40;
+  font-size: 1.25rem;
+  text-align: left;
+}
+.my_order_tab .my_order_list ul li {
+  border: none;
+  margin: 0;
+}
+.my_order_tab .cart_total {
+  position: sticky;
+  bottom: 0;
+  background: #f8f9fa;
+  padding: 1rem;
+  margin: 0;
+  filter: drop-shadow(0 -2mm 4mm rgba(0, 0, 0, 0.1));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 8rem;
+}
+.my_order_tab .cart_total .cart_total_desc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.my_order_tab .cart_total .cart_total_desc p {
+  font-weight: 700;
+}
+
+.open_tab {
+  transform: translateX(100%);
+}
+
+.custom_btn {
+  width: 100%;
+  height: 48px;
+  background: linear-gradient(135deg, #007bff 0%, #6c757d 100%);
+  border: none;
+  border-radius: 5px;
+  color: #f8f9fa;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.custom_btn:active, .custom_btn:hover {
+  color: #f8f9fa;
+}/*# sourceMappingURL=cartTab.css.map */

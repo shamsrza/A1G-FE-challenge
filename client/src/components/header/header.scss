@@ -1,0 +1,43 @@
+@import '../../styles/abstracts/variables';
+@import '../../styles/abstracts/mixins';
+header {
+  @include flex-center($direction: row);
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+
+  .header-logo-link {
+    font-size: $font-size-xl;
+    line-height: 1.75rem;
+    font-weight: $font-weight-light-bold;
+    color: $dark-gray;
+    text-decoration: none;
+  }
+
+  .header-container {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: $light-gray;
+    border-radius: 50% 50%;
+    @include flex-center($direction: row);
+    position: relative;
+
+    .cart-img {
+      width: 1.5rem;
+      cursor: pointer;
+    }
+
+    .cart-notification {
+      position: absolute;
+      top: 66%;
+      right: 50%;
+      background-color: $danger-color;
+      color: $light-gray;
+      font-size: $font-size-xs;
+      line-height: 1.25rem;
+      width: 1.25rem;
+      height: 1.25rem;
+      border-radius: 50% 50%;
+      @include flex-center($direction: row);
+    }
+  }
+}

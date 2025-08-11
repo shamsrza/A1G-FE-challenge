@@ -1,0 +1,82 @@
+@import '../../styles/abstracts/variables';
+@import '../../styles/abstracts/mixins';
+
+.product_detail {
+  background: #f0f0f0;
+  margin-top: 5rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  @include responsive($breakpoint-md) {
+    padding: 5rem;
+  }
+
+  .product_detail_title {
+    font-size: $font-size-xxl;
+    line-height: 2.25rem;
+    text-align: center;
+  }
+
+  .product_detail_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+
+    @include responsive($breakpoint-md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    img {
+      width: 15rem;
+    }
+
+    .product_detail_description {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+
+      h1 {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      .product_detail_price {
+        font-weight: $font-weight-base;
+        font-size: $font-size-lg;
+        // line-height: 2.25rem;
+      }
+
+      .quantity_btns {
+        @include flex-center($direction: row);
+        justify-content: flex-start;
+        gap: 1.25rem;
+        margin-bottom: 5rem;
+
+        .quantity_btn_div {
+          @include flex-center($direction: row);
+          gap: 1rem;
+          button {
+            background-color: $light-gray;
+            height: 2rem;
+            width: 2rem;
+            font-weight: $font-weight-base;
+            font-size: $font-size-lg;
+            border-radius: 0.4rem;
+            @include flex-center($direction: row);
+            border: 1px solid $gray-color;
+          }
+
+          p {
+            height: 2rem;
+            width: 2rem;
+            font-size: $font-size-base;
+            border-radius: 0.4rem;
+            @include flex-center($direction: row);
+          }
+        }
+      }
+    }
+  }
+}
